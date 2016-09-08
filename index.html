@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Search</title>
+		<meta charset="utf-8">
+		<script 	src="https://code.jquery.com/jquery-3.1.0.min.js"   
+					integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   
+					crossorigin="anonymous">
+		</script>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header>
+		  <h1 id="searched">Форма Поиска</h1>
+		</header>
+	    
+		<div class="container" id="x">
+		</div>
+		
+		<footer>
+		    <button onclick="prev()" id="prev">Назад</button>
+		    <span id="page">Страница:<span id="page-num"></span></span>
+    		<button onclick="next()" id="next">Далее</button>
+    		<button onclick="init()" id="init">Поиск</button>
+    		<div id="load">Загрузка</div>
+		</footer>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
