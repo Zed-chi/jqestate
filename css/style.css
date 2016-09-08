@@ -2,28 +2,32 @@
 
 
 /*MAIN*/
-* {
+*{
     margin:0;
     padding:0;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight:500;
     box-sizing:border-box;
     color:#252525;
+    
 }
 
 header, footer{
-    text-align:center;
     background:#f5f5f5;
-    padding:30px;
-    border:1px solid #fbfbfb;
 }
 
     header{
         max-height:116px;
         height:116px;
         font-size:16px;
+        padding-left: 150px;
+        padding-top:40px;
     }
+        h1{
+            font-size: 25px;
+        }
     footer{
+        text-align:center;
         max-height:130px;
         height:130px;
         font-size:16px;
@@ -64,41 +68,52 @@ header, footer{
 /*CONTENT*/
 
 .container{
-    max-width:1440px;
+    /*max-width:1440px;*/
     margin:0 auto;
     text-align:center;
 }
 
 .card{
-    display:inline-table;
-    width:360px;
-    height:350px;
-    max-height:350px;
-    padding:0 30px 0 30px;
+    display:inline-block;
+    width:25%;
+    max-height:355px;
+    height:355px;
+    padding:0 30px;
     background: white;
-    font-size:10px;
-    text-align:center;
-    z-index:1;
-    border:1px solid #f5f5f5;
-    border-collapse: collapse;
+    border:1px solid #e8e8e8;
+    text-align: left;
 }
+
 
     .card img{
         margin-top:30px;
-        width:300px;
+        margin-bottom:16px;
+        width:calc(100% - 0px);
         height:200px;
     }
 
         .route{
             font-size:13px;
+            margin-bottom:4px;
+            min-height:19px;
         }
         .settle{
-            font-size:22px;
+            font-size:21px;
+            margin-bottom:18px;
+            min-height:30px;
         }
         .info{
-            font-size:13px;
-            display:inline;
-            margin: 0 5px;
+            font-size:14px;
+            display:inline-block;
+            margin-right:15px;
+        }
+        .border{
+            border-right:1px solid #e8e8e8;
+            height:10px;
+            width:100%;
+        }
+        .space{
+           padding-right: 15px; 
         }
 
-
+@media /*не забыть */
