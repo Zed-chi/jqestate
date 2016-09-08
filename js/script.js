@@ -77,7 +77,7 @@ function getData(){
                 "</div>";
             }
         }
-        else{alert("fuck!");}
+        else{alert("fail!");}
     })
     
     .fail(function(){alert("Нет объектов");});
