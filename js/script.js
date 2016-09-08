@@ -4,24 +4,20 @@
     var offset = limit;
     var url = "https://api.jqestate.ru/v1/properties/country?pagination[limit]="+limit+"&pagination[offset]="+offset;
     var num=1;
-
+    
 // functions
-
 function next(){
     offset+=limit;
     if(offset>=limit*2){document.getElementById("prev").style.display = "inline-block";}
     num++;
-    getPage();
-    getData();    
+    getData();
 }
 
 function prev(){
-
     offset-=limit;
     if(offset<limit*2){document.getElementById("prev").style.display = "none";}
     num--;
-    getPage();
-    getData();    
+    getData();
 }
 
 function init(){
@@ -29,11 +25,10 @@ function init(){
     document.getElementById("init").style.display = "none";
     document.getElementById("page").style.display = "inline-block";
     getData();
-    getPage();
 }
 
 function getPage(){
-    document.getElementById("page-num").innerHTML=num;
+    document.getElementById("page-num").innerHTML=" "+num+" ";
 }
 
 function getData(){
@@ -48,7 +43,12 @@ function getData(){
     .done(function( data ) {
         //vars
         var length  = data.items.length;
-        searched.innerHTML = "Найдено: "+data.pagination.total;
+        var all = data.pagination.total;
+        searched.innerHTML = "Найдено: "+all;
+        var pages = Math.ceil(all/limit);
+        getPage();
+        document.getElementById("pages").innerHTML = pages;
+        
         
         //stuff
         x.innerHTML="";
@@ -77,7 +77,8 @@ function getData(){
                 "</div>";
             }
         }
-        else{alert("fail!");}
+        else{alert("fuck!");}
     })
+    
     .fail(function(){alert("Нет объектов");});
 }
